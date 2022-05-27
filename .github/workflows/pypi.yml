@@ -1,0 +1,23 @@
+name: Publish to PyPI
+on:
+  push:
+    tags:
+      - '**'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: get up on this
+        uses: actions/checkout@v2
+
+      - name: hit it
+        run: |
+          python3 -m venv venv
+          . ./venv/bin/activate
+          pip install -U .[dev]
+          flit publish
+        env:
+          FLIT_USERNAME: ${{ secrets.FLIT_USERNAME }}
+          FLIT_PASSWORD: ${{ secrets.FLIT_PASSWORD }}
+
