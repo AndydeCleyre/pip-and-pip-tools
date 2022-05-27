@@ -12,7 +12,7 @@ dependencies = ["pip", "pip-tools>=6.6.2"]
 version = "6.6.2"
 
 [project.urls]
-Home = "https://github.com/andydecleyre/pip_and_pip_tools"
+Home = "https://github.com/andydecleyre/pip-and-pip-tools"
 
 [project.optional-dependencies]
 dev = ["flit<4"]
