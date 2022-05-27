@@ -6,7 +6,7 @@ pip and pip-tools
 Purpose
 =======
 
-Occasionally, a new pip__ release is incomatible with the latest existing
+Occasionally, a new pip__ release is incompatible with the latest existing
 `pip-tools`__ release.
 
 The purpose of this package is to make it easy to ensure compatible installations of the two tools.
