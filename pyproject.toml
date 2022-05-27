@@ -1,0 +1,18 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pip_and_pip_tools"
+description = "Requires compatible installations of pip and pip-tools"
+authors = [{name = "Andy Kluger"}]
+license = {file = "LICENSE"}
+readme = "README.rst"
+dependencies = ["pip", "pip-tools>=6.6.2"]
+version = "6.6.2"
+
+[project.urls]
+Home = "https://github.com/andydecleyre/pip_and_pip_tools"
+
+[project.optional-dependencies]
+dev = ["flit<4"]
