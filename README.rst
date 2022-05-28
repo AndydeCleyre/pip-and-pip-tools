@@ -2,6 +2,7 @@
 pip and pip-tools
 =================
 
+|pypi-ci|
 
 Purpose
 =======
@@ -55,3 +56,7 @@ some guy you don't know.
 I am not going to anything malicious with this package,
 but depending on it without verifying its content
 is a risk you should beware.
+
+.. |pypi-ci| image:: https://github.com/AndydeCleyre/pip-and-pip-tools/actions/workflows/pypi.yml/badge.svg
+   :alt: Publish to PyPI - GitHub Actions
+   :target: https://github.com/AndydeCleyre/pip-and-pip-tools/actions/workflows/pypi.yml
