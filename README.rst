@@ -62,7 +62,7 @@ Usage
 
 .. code:: console
 
-   $ pip install -U pip pip-and-pip-tools
+   $ pip install -U pip pip-tools pip-and-pip-tools
 
 .. |pypi-ci| image:: https://github.com/AndydeCleyre/pip-and-pip-tools/actions/workflows/pypi.yml/badge.svg
    :alt: Publish to PyPI - GitHub Actions
