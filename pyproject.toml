@@ -13,6 +13,3 @@ version = "7.4.1"
 
 [project.urls]
 Home = "https://github.com/andydecleyre/pip-and-pip-tools"
-
-[project.optional-dependencies]
-dev = ["flit<4"]

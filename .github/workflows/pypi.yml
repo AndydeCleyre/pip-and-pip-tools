@@ -10,12 +10,7 @@ jobs:
       id-token: write
     steps:
 
-      - name: get up on this
-        uses: actions/checkout@v4
-
-      - name: hit it
-        run: |
-          python3 -m venv venv
-          . ./venv/bin/activate
-          pip install -U .[dev]
-          flit publish
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv build
+      - run: uv publish --trusted-publishing always
