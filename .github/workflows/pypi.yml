@@ -9,7 +9,7 @@ jobs:
     steps:
 
       - name: get up on this
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: hit it
         run: |
@@ -17,7 +17,3 @@ jobs:
           . ./venv/bin/activate
           pip install -U .[dev]
           flit publish
-        env:
-          FLIT_USERNAME: ${{ secrets.FLIT_USERNAME }}
-          FLIT_PASSWORD: ${{ secrets.FLIT_PASSWORD }}
-
