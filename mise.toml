@@ -1,0 +1,7 @@
+[tools]
+uv = "latest"
+"pipx:wheezy.template" = "latest"
+
+[[watch_files]]
+patterns = ["vars.json", "pyproject.toml.wz"]
+run = "wheezy.template pyproject.toml.wz vars.json >pyproject.toml"
