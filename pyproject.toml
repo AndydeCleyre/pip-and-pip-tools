@@ -9,7 +9,7 @@ authors = [{name = "Andy Kluger"}]
 license = {file = "LICENSE"}
 readme = "README.rst"
 dependencies = ["pip<26", "pip-tools>=7.5.2"]
-version = "7.5.2"
+version = "7.5.2.1"
 
 [project.urls]
 Home = "https://github.com/andydecleyre/pip-and-pip-tools"

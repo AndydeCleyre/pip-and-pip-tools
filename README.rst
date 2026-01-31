@@ -47,6 +47,10 @@ Since this has no real code to version,
 we will version each release with the corresponding
 latest version of pip-tools, for clarity.
 
+If a new release is needed without a pip-tools version bump,
+an extra version segment will be added.
+This is done by setting ``version_overflow`` in ``vars.json``.
+
 Warnings
 ========
 
@@ -63,6 +67,22 @@ Usage
 .. code:: console
 
    $ pip install -U pip pip-tools pip-and-pip-tools
+
+Maintenance
+===========
+
+If anyone wants to take over maintenance of the package,
+please open an issue.
+
+Basically:
+
+- Install and setup [mise](https://mise.jdx.dev/)
+- Edit ``vars.json`` according to the `Approach <approach>`_ section above
+
+  - Leave ``version_overflow`` set to the empty string
+    unless you need a second release against the same pip-tools version
+
+- Commit, tag, and push, with the tag being the release version
 
 .. |pypi-ci| image:: https://github.com/AndydeCleyre/pip-and-pip-tools/actions/workflows/pypi.yml/badge.svg
    :alt: Publish to PyPI - GitHub Actions
