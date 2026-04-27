@@ -8,8 +8,8 @@ description = "Requires compatible installations of pip and pip-tools"
 authors = [{name = "Andy Kluger"}]
 license = {file = "LICENSE"}
 readme = "README.rst"
-dependencies = ["pip", "pip-tools>=7.5.3"]
-version = "7.5.3"
+dependencies = ["pip<26.1", "pip-tools>=7.5.3"]
+version = "7.5.3.1"
 
 [project.urls]
 Home = "https://github.com/andydecleyre/pip-and-pip-tools"
