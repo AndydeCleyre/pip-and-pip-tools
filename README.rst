@@ -52,6 +52,7 @@ latest version of pip-tools, for clarity.
 If a new release is needed without a pip-tools version bump,
 an extra version segment will be added.
 This is done by setting ``version_overflow`` in ``vars.json``.
+Otherwise, ``version_overflow`` should be the empty string.
 
 Warnings
 ========
@@ -79,10 +80,16 @@ or adopt it into a trusted organization, please open an issue.
 Basically:
 
 - Install and setup [mise](https://mise.jdx.dev/)
-- Edit ``vars.json`` according to the `Approach <approach>`_ section above
+- Edit ``vars.json``:
 
+  - ``bad_pip_version``: ``INCOMPATIBLE`` in the `Approach <approach>`_ section above, 
+    it's either a pip version string to block updating to or through,
+    or the empty string when the latest pip release is compatible with pip-tools
+  - ``latest_pip_tools_version``: ``LATEST`` in the `Approach <approach>`_ section above,
+    it's a pip-tools version string
   - Leave ``version_overflow`` set to the empty string
-    unless you need a second release against the same pip-tools version
+    unless you need a second release against the same pip-tools version,
+    in which case use an integer string like ``"1"``.
 
 - Commit, tag, and push, with the tag being the release version
 
