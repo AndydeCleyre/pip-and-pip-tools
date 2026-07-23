@@ -38,6 +38,8 @@ this package will be published again, depending on:
   - ``pip-tools>=LATEST``
   - ``pip``
 
+The pip-tools package itself sets the minimum pip version.
+
 __ https://pypi.org/
 
 Versioning
