@@ -77,21 +77,29 @@ Maintenance
 If anyone wants to take over maintenance of the package,
 or adopt it into a trusted organization, please open an issue.
 
-Basically:
+Keeping it updated:
 
 - Install and setup [mise](https://mise.jdx.dev/)
-- Edit ``vars.json``:
+- Edit ``vars.json``,
+  and a hook defined in ``mise.toml`` should rewrite ``pyproject.toml``.
+  ``vars.json`` has three keys:
 
   - ``bad_pip_version``: ``INCOMPATIBLE`` in the `Approach <approach>`_ section above, 
-    it's either a pip version string to block updating to or through,
+    it's either a pip version string to block updating to (or beyond),
     or the empty string when the latest pip release is compatible with pip-tools
   - ``latest_pip_tools_version``: ``LATEST`` in the `Approach <approach>`_ section above,
-    it's a pip-tools version string
+    it's a pip-tools minimum version string
   - Leave ``version_overflow`` set to the empty string
     unless you need a second release against the same pip-tools version,
     in which case use an integer string like ``"1"``.
 
-- Commit, tag, and push, with the tag being the release version
+- Commit, tag, and push, with the tag being the release version, for example:
+
+.. code:: console
+
+   $ git commit vars.json pyproject.toml -m "block pip 26.1"
+   $ git tag 7.6.0
+   $ git push && git push --tags
 
 .. |pypi-ci| image:: https://github.com/AndydeCleyre/pip-and-pip-tools/actions/workflows/pypi.yml/badge.svg
    :alt: Publish to PyPI - GitHub Actions
