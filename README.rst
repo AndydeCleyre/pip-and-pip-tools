@@ -72,7 +72,7 @@ Maintenance
 ===========
 
 If anyone wants to take over maintenance of the package,
-please open an issue.
+or adopt it into a trusted organization, please open an issue.
 
 Basically:
 
